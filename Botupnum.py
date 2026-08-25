@@ -385,7 +385,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             box_content += (
                 f"╔═══════════ Result {i} ═══════════╗\n"
                 f"🧑‍💼 Name: {name}\n"
-                f"📛 Father: {fname}\n"
+                f"🧑‍🧑‍🧒‍🧒 Father: {fname}\n"
                 f"📱 Mobile: {mobile}\n"
                 f"📧 Email: {email}\n"
                 f"🏠 Address: {address}\n"
