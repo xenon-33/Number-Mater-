@@ -383,7 +383,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             id_field = res.get('id', 'N/A')
             
             box_content += (
-                f"╔═══════════ Result {i} ═══════════╗\n"
+                f"╔══════ Result {i} ══╗\n"
                 f"🧑‍💼 Name: {name}\n"
                 f"🧑‍🧑‍🧒‍🧒 Father: {fname}\n"
                 f"📱 Mobile: {mobile}\n"
@@ -392,7 +392,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 f"📡 Circle: {circle}\n"
                 f"📱 Alt: {alt}\n"
                 f"🪪 ID: {id_field}\n"
-                f"╚════════════════════════════════╝\n"
+                f"╚═══════════════════╝\n"
             )
         
         if len(results) > 10:
