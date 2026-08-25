@@ -388,10 +388,10 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 f"📛 Father: {fname}\n"
                 f"📱 Mobile: {mobile}\n"
                 f"📧 Email: {email}\n"
-                f"📍 Address: {address}\n"
+                f"🏠 Address: {address}\n"
                 f"📡 Circle: {circle}\n"
                 f"📱 Alt: {alt}\n"
-                f"🆔 ID: {id_field}\n"
+                f"🪪 ID: {id_field}\n"
                 f"╚════════════════════════════════╝\n"
             )
         
