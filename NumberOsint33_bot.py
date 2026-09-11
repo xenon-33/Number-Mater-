@@ -24,8 +24,8 @@ logger = logging.getLogger(__name__)
 
 # ============================================================
 # 🔥 Owner's token – do not change
-BOT_TOKEN = "8716988605:AAF9YS520zb6x1k9ulhiBq_Lh-mhWB65paU"
-SUPER_ADMIN_ID = 6303062255
+BOT_TOKEN = "8990755996:AAFXcCrktKzuFOlVDDNXOKMfWldzwkemY_M"
+SUPER_ADMIN_ID = 8727749451
 
 # ── APIs ──
 MOBILE_API_URL = "https://tfqdeadlo-1-78bapi.hf.space/search?mobile="
