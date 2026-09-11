@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Bot Name: Vish - Smart Bot (20 Borders)
-Owner: @Xenon33cyber
+Bot Name: Tocxic — Smart Bot (20 Borders)
+Owner: @TOXICTECH206
 """
 
 import sqlite3
@@ -26,7 +26,11 @@ logger = logging.getLogger(__name__)
 # 🔥 Owner's token – do not change
 BOT_TOKEN = "8716988605:AAF9YS520zb6x1k9ulhiBq_Lh-mhWB65paU"
 SUPER_ADMIN_ID = 6303062255
-API_URL = "https://adityaapi.onrender.com/api/v1/info?key=Rahul&query="
+
+# ── APIs ──
+MOBILE_API_URL = "https://tfqdeadlo-1-78bapi.hf.space/search?mobile="
+AADHAR_API_URL = "https://wannabeyour-worker.hf.space/api/icmr/aadhar?aadhar="
+
 AUTO_DELETE_TIME = 5
 RESULT_DELETE_TIME = 300  # 5 minutes
 MAX_RESULTS = 20
@@ -34,8 +38,8 @@ MAX_RESULTS = 20
 
 # ======================== 20 HEADERS =========================
 HEADERS = [
-    "💀 [OWNER] :: @Xenon33cyber",
-    "🔥 [XENON] :: TERMINAL_ACTIVE",
+    "💀 [OWNER] :: @TOXICTECH206",
+    "🔥 [TOXIC] :: TERMINAL_ACTIVE",
     "⚡ [HACKER] :: SYSTEM_ONLINE",
     "🖥️ [ROOT] :: ACCESS_GRANTED",
     "🐉 [DANAV] :: DARK_MODE",
@@ -84,7 +88,7 @@ def format_hacker(msg):
     return f"{header}\n{line_20()}\n{msg}\n{line_20()}\n{footer}"
 
 # ======================== Database ===========================
-DB_FILE = "NumberOsint33_bot.db"
+DB_FILE = "Tocxic_osint_bot.db"
 conn = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = conn.cursor()
 
@@ -126,11 +130,11 @@ def is_admin(user_id):
     return user[5] == 1
 
 # ======================== CONSTANTS =================
-OWNER_LINK = "<a href='https://t.me/Xenon33cyber'>@Xenon33cyber</a>"
-UPDATE_LINK = "<a href='https://t.me/Xenoncyber33'>@Xenoncyber33</a>"
-SUPPORT_LINK = "<a href='https://t.me/xenondaemon_Team'>@xenondaemon_Team</a>"
+OWNER_LINK   = "<a href='https://t.me/TOXICTECH206'>@TOXICTECH206</a>"
+UPDATE_LINK  = "<a href='https://t.me/+tye88wkm-MNjMDM1'>📢 Channel</a>"
+SUPPORT_LINK = "<a href='https://t.me/+0G9Aalk77bdmZTE1'>🛠️ Team</a>"
 
-# ======================== BOXES (20 Borders) =================
+# ======================== BOXES =================
 FETCHING_BOX = (
     "╔══『 ⚡ 𝑭𝑬𝑻𝑪𝑯𝑰𝑵𝑮 』══╗\n\n"
     "🔍 𝑭𝒆𝒕𝒄𝒉𝒊𝒏𝒈 𝑫𝒂𝒕𝒂...\n"
@@ -149,9 +153,9 @@ def welcome_box(admin, credits):
     return (
         f"╔═══『 💀 𝑾𝑬𝑳𝑪𝑶𝑴𝑬 』═══╗\n\n"
         f"👋 𝑾𝒉𝒂𝒕'𝒔 𝒖𝒑, 𝒃𝒓𝒐! {admin}\n"
-        f"🧑‍💻 𝑰'𝒎 𝑿𝒆𝒏𝒐𝒏 – 𝑻𝒉𝒆 𝑯𝒂𝒄𝒌𝒆𝒓 𝑴𝒂𝒄𝒉𝒊𝒏𝒆\n"
+        f"🧑‍💻 𝑰'𝒎 𝑻𝒐𝒙𝒊𝒄 – 𝑻𝒉𝒆 𝑯𝒂𝒄𝒌𝒆𝒓 𝑴𝒂𝒄𝒉𝒊𝒏𝒆\n"
         f"💻 𝑪𝒓𝒆𝒅𝒊𝒕𝒔: {credits} (20 𝒅𝒆𝒎𝒐)\n"
-        f"⚡ 𝑪𝒐𝒎𝒎𝒂𝒏𝒅: /𝒔𝒆𝒂𝒓𝒄𝒉 &𝒍𝒕;𝒏𝒖𝒎𝒃𝒆𝒓&gt;\n"
+        f"⚡ 𝑪𝒐𝒎𝒎𝒂𝒏𝒅: /𝒔𝒆𝒂𝒓𝒄𝒉 &𝒍𝒕;𝒏𝒖𝒎𝒃𝒆𝒓 𝒐𝒓 𝒂𝒂𝒅𝒉𝒂𝒓&gt;\n"
         f"🔐 𝑪𝒐𝒔𝒕: 10 𝒄𝒓𝒆𝒅𝒊𝒕𝒔 𝒑𝒆𝒓 𝒔𝒆𝒂𝒓𝒄𝒉\n"
         f"📢 𝑼𝒑𝒅𝒂𝒕𝒆𝒔: {UPDATE_LINK} | {SUPPORT_LINK}\n\n"
         f"╚{line_20()}╝"
@@ -199,6 +203,10 @@ def info_box(title, content):
     border = "═" * 20
     return f"╔═══『 {title} 』═══╗\n\n{content}\n\n╚{border}╝"
 
+def fancy_box(title, content):
+    border = "═" * 20
+    return f"╔═══『 {title} 』═══╗\n\n{content}\n\n╚{border}╝"
+
 CREDITS_GUIDE_BOX = (
     "╔══『 💳 𝑪𝑹𝑬𝑫𝑰𝑻𝑺 𝑮𝑼𝑰𝑫𝑬 』══╗\n\n"
     "🔹 /𝒈𝒊𝒗𝒆𝒂𝒍𝒍 &𝒍𝒕;𝒂𝒎𝒐𝒖𝒏𝒕&gt;\n"
@@ -227,14 +235,11 @@ def admin_panel_box(content):
 NUMBER_ENTRY_BOX = (
     "╔══『 🔢 𝑬𝑵𝑻𝑬𝑹 𝑵𝑼𝑴𝑩𝑬𝑹 』══╗\n\n"
     "📱 𝑷𝒍𝒆𝒂𝒔𝒆 𝒆𝒏𝒕𝒆𝒓 𝒕𝒉𝒆 𝒏𝒖𝒎𝒃𝒆𝒓\n"
-    "🔹 𝑭𝒐𝒓𝒎𝒂𝒕: 9876543210\n"
+    "🔹 𝑴𝒐𝒃𝒊𝒍𝒆: 9876543210 (10 digits)\n"
+    "🔹 𝑨𝒂𝒅𝒉𝒂𝒓: 123456789012 (12 digits)\n"
     "🔹 (𝑾𝒊𝒕𝒉𝒐𝒖𝒕 +91)\n\n"
     "╚════════════════╝"
 )
-
-def fancy_box(title, content):
-    border = "═" * 20
-    return f"╔═══『 {title} 』═══╗\n\n{content}\n\n╚{border}╝"
 
 # ======================== Keyboard ===========================
 def get_main_keyboard(user_id):
@@ -255,27 +260,45 @@ def get_main_keyboard(user_id):
 
     return ReplyKeyboardMarkup(keyboard, resize_keyboard=True, is_persistent=True)
 
-# ======================== API Call ===========================
-async def fetch_number_info(number):
+# ======================== API Calls ===========================
+
+async def fetch_mobile_info(number):
+    """Mobile API — single object"""
     async with aiohttp.ClientSession() as session:
         try:
-            async with session.get(API_URL + number, timeout=15) as resp:
+            async with session.get(MOBILE_API_URL + number, timeout=15) as resp:
                 if resp.status == 200:
                     data = await resp.json()
-                    if data and data.get('results') and len(data.get('results', [])) > 0:
-                        return data
-                    else:
-                        return {"error": "no_data"}
+                    if data and data.get("status") == "success" and data.get("data"):
+                        return {"source": "mobile", "data": data["data"]}
+                    return {"error": "no_data"}
                 else:
-                    return {"error": f"API server busy (HTTP {resp.status}), try again in a minute."}
+                    return {"error": f"API busy (HTTP {resp.status})"}
         except aiohttp.ClientConnectorError:
-            return {"error": "Network error – check your internet, dude!"}
-        except aiohttp.ClientResponseError as e:
-            return {"error": f"API error: {str(e)}"}
+            return {"error": "Network error — check internet."}
         except asyncio.TimeoutError:
-            return {"error": "Timeout – server is sleepy, try again."}
+            return {"error": "Timeout — server sleepy."}
         except Exception as e:
-            return {"error": f"Something went wrong: {str(e)}"}
+            return {"error": str(e)}
+
+async def fetch_aadhar_info(aadhar):
+    """Aadhar API — array of results"""
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.get(AADHAR_API_URL + aadhar, timeout=20) as resp:
+                if resp.status == 200:
+                    data = await resp.json()
+                    if data and data.get("status") == "success" and data.get("data"):
+                        return {"source": "aadhar", "data": data["data"]}
+                    return {"error": "no_data"}
+                else:
+                    return {"error": f"API busy (HTTP {resp.status})"}
+        except aiohttp.ClientConnectorError:
+            return {"error": "Network error — check internet."}
+        except asyncio.TimeoutError:
+            return {"error": "Timeout — server sleepy."}
+        except Exception as e:
+            return {"error": str(e)}
 
 # ======================== AUTO DELETE HELPER =================
 async def auto_delete_message(context, chat_id, message_id, delay=AUTO_DELETE_TIME):
@@ -290,12 +313,10 @@ async def auto_delete_message(context, chat_id, message_id, delay=AUTO_DELETE_TI
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     msg = await update.message.reply_text(format_hacker(HELP_BOX), parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
-    # PERMANENT - only user's message deletes
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
 
 async def pay_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = await update.message.reply_text(format_hacker(PAYMENT_BOX), parse_mode='HTML', reply_markup=get_main_keyboard(update.effective_user.id))
-    # PERMANENT
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -305,7 +326,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     username = update.effective_user.username
     user_display = f"@{username}" if username else first_name
     admin_tag = "👑 Admin Sahab" if user[5] == 1 else user_display
-    
+
     msg = format_hacker(welcome_box(admin_tag, user[1]))
 
     try:
@@ -315,7 +336,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parse_mode='HTML',
             reply_markup=get_main_keyboard(user_id)
         )
-        # PERMANENT - only user's message deletes
         asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
     except Exception:
         text_msg = await update.message.reply_text(msg, parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
@@ -324,9 +344,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ======================== Button Handlers =====================
 async def button_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = await update.message.reply_text(format_hacker(NUMBER_ENTRY_BOX), parse_mode='HTML')
-    # Number entry box - delete after 10 seconds
     asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=10))
-    # User's button message - delete after 3 seconds
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
     context.user_data['action'] = 'waiting_search'
 
@@ -337,7 +355,6 @@ async def button_balance(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode='HTML',
         reply_markup=get_main_keyboard(update.effective_user.id)
     )
-    # PERMANENT
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
 
 async def button_request_credits(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -356,7 +373,6 @@ async def button_give_credits_guide(update: Update, context: ContextTypes.DEFAUL
         asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=15))
         return
     msg = await update.message.reply_text(format_hacker(CREDITS_GUIDE_BOX), parse_mode='HTML', reply_markup=get_main_keyboard(update.effective_user.id))
-    # PERMANENT
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
 
 # Admin Buttons
@@ -464,7 +480,6 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text.strip()
     action = context.user_data.get('action')
 
-    # Delete user's number message after 3 seconds
     asyncio.create_task(auto_delete_message(context, update.message.chat_id, update.message.message_id, delay=3))
 
     if text.lower() in ["help", "🆘 help"]:
@@ -474,9 +489,23 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if action == 'waiting_search':
         number = text.replace(" ", "").strip()
         if not number.isdigit():
-            msg = await update.message.reply_text(format_hacker(error_box("❌ Digits only! Example: 9876543210")), parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
+            msg = await update.message.reply_text(format_hacker(error_box("❌ Digits only! Example: 9876543210 or 123456789012")), parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
             asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=15))
             return
+
+        # ── Auto-detect: 12 digits = Aadhar, 10 digits = Mobile ──
+        if len(number) == 12:
+            search_type = "aadhar"
+        elif len(number) == 10:
+            search_type = "mobile"
+        else:
+            msg = await update.message.reply_text(
+                format_hacker(error_box("❌ Invalid length!\nMobile = 10 digits\nAadhar = 12 digits")),
+                parse_mode='HTML', reply_markup=get_main_keyboard(user_id)
+            )
+            asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=15))
+            return
+
         context.user_data['action'] = None
         user = get_user(user_id)
         if user[1] < 10:
@@ -489,10 +518,13 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         conn.commit()
 
         searching_msg = await update.message.reply_text(format_hacker(FETCHING_BOX), parse_mode='HTML')
-        # FETCHING_BOX - delete after 3 seconds
         asyncio.create_task(auto_delete_message(context, searching_msg.chat_id, searching_msg.message_id, delay=3))
 
-        full_response = await fetch_number_info(number)
+        # ── Route to correct API ──
+        if search_type == "aadhar":
+            full_response = await fetch_aadhar_info(number)
+        else:
+            full_response = await fetch_mobile_info(number)
 
         if not full_response or "error" in full_response:
             error_msg = full_response.get('error', 'Something went wrong!')
@@ -505,48 +537,52 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=15))
                 return
 
-        results = full_response.get('results', [])
-        if not results:
-            msg = await update.message.reply_text(format_hacker(NO_DATA_BOX), parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
-            asyncio.create_task(auto_delete_message(context, msg.chat_id, msg.message_id, delay=15))
-            return
+        source = full_response["source"]
+        data = full_response["data"]
 
-        # ========== CLEAN RESULT BOX ==========
-        box_content = f"📞 Number: <code>{number}</code>\n💰 Remaining: {new_bal}\n\n"
-
-        for i, res in enumerate(results[:20], 1):
-            name = res.get('name', 'N/A')
-            fname = res.get('fname', 'N/A')
-            mobile = res.get('mobile', 'N/A')
-            email = res.get('email', 'N/A')
-            address = res.get('address', 'N/A')
-            circle = res.get('circle', 'N/A')
-            alt = res.get('alt', 'N/A')
-            id_field = res.get('id', 'N/A')
-            
+        # ── Format based on source ──
+        if source == "mobile":
+            d = data
+            box_content = f"📱 Mobile: <code>{number}</code>\n💰 Remaining: {new_bal}\n\n"
             box_content += (
-                f"╔════════Result {i}═════╗\n"
-                f"🧑‍💼 Name: {name}\n"
-                f"🧑‍🧑‍🧒‍🧒 Father: {fname}\n"
-                f"📱 Mobile: {mobile}\n"
-                f"📧 Email: {email}\n"
-                f"🏠 Address: {address}\n"
-                f"📡 Circle: {circle}\n"
-                f"📱 Alt: {alt}\n"
-                f"🪪 ID: {id_field}\n"
+                f"╔════════Result═════╗\n"
+                f"🧑‍💼 Name: {d.get('name', 'N/A')}\n"
+                f"🧑‍🧑‍🧒‍🧒 Father: {d.get('fname', 'N/A')}\n"
+                f"📱 Mobile: {d.get('mobile', 'N/A')}\n"
+                f"📧 Email: {d.get('email', 'N/A')}\n"
+                f"🏠 Address: {d.get('address', 'N/A')}\n"
+                f"📡 Circle: {d.get('circle', 'N/A')}\n"
+                f"📱 Alt: {d.get('alt', 'N/A')}\n"
+                f"🪪 ID: {d.get('id', 'N/A')}\n"
                 f"╚═══════════════════╝\n"
             )
 
-        if len(results) > 20:
-            box_content += f"\n⚠️ Showing first 20, search more for the rest."
+        else:  # aadhar
+            results = data
+            box_content = f"🪪 Aadhar: <code>{number}</code>\n💰 Remaining: {new_bal}\n"
+            box_content += f"📊 Total Results: {len(results)}\n\n"
+
+            for i, res in enumerate(results[:MAX_RESULTS], 1):
+                box_content += (
+                    f"╔════════Result {i}═════╗\n"
+                    f"🧑‍💼 Name: {res.get('name', 'N/A')}\n"
+                    f"🧑‍🧑‍🧒‍🧒 Father: {res.get('fathersName') or 'N/A'}\n"
+                    f"📱 Phone: {res.get('phoneNumber', 'N/A')}\n"
+                    f"📱 Other: {res.get('otherNumber') or 'N/A'}\n"
+                    f"🏠 Address: {res.get('address', 'N/A')}\n"
+                    f"📡 Source: {res.get('source', 'N/A')}\n"
+                    f"╚═══════════════════╝\n"
+                )
+
+            if len(results) > MAX_RESULTS:
+                box_content += f"\n⚠️ Showing first {MAX_RESULTS}, search more for the rest."
 
         box_content = box_content.rstrip('\n')
         parsed_msg = info_box("📝 Result", box_content)
         final_msg = format_hacker(parsed_msg)
 
-        # RESULT - DELETE AFTER 5 MINUTES (300 seconds)
         result_msg = await update.message.reply_text(final_msg, parse_mode='HTML', reply_markup=get_main_keyboard(user_id))
-        asyncio.create_task(auto_delete_message(context, result_msg.chat_id, result_msg.message_id, delay=300))
+        asyncio.create_task(auto_delete_message(context, result_msg.chat_id, result_msg.message_id, delay=RESULT_DELETE_TIME))
 
     elif action == 'waiting_request_credits':
         try:
@@ -557,7 +593,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         c.execute("INSERT INTO credit_requests (user_id, amount) VALUES (?, ?)", (user_id, amount))
         conn.commit()
-        
+
         username = update.effective_user.username or "NoUsername"
         user_link = f"<a href='tg://user?id={user_id}'>@{username}</a>"
         admin_msg = (
@@ -1071,5 +1107,5 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     app.add_handler(CallbackQueryHandler(admin_callback))
 
-    print("🔥 Vish – 20 Borders – Running, Maharaj!")
+    print("🔥 Tocxic – Dual API – Running, Maharaj!")
     app.run_polling(drop_pending_updates=True)
